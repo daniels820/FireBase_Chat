@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" ng-app="myApp">
+<head>
+    <base href="/"/>
+    <meta charset="utf-8"/>
+    <title>Danny</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta name="theme-color" content="#F04637"/>
+    <meta name="mobile-web-app-capable" content="yes"/>
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,100,700,900' rel='stylesheet' type='text/css'>
+
+
+    <!--   App CSS Files   -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+    <script src="js/lib/angular/angular.min.js"></script>
+    <script src="js/lib/angular/angular-route.min.js"></script>
+    <script src="js/lib/angular/angular-animate.min.js"></script>
+    <script src="js/lib/require.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.6.9/firebase.js"></script>
+    <script>
+
+        // Initialize Firebase
+        //  var Firebase = require("firebase");
+        let config = {
+            apiKey: "AIzaSyCW-bx7PL9e4ItJITPiATiW3jEPa7nUa8g",
+            authDomain: "sample-3ce35.firebaseapp.com",
+            databaseURL: "https://sample-3ce35.firebaseio.com",
+            storageBucket: "sample-3ce35.appspot.com",
+            messagingSenderId: "247706567024"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+
+    <script src="https://cdn.firebase.com/libs/angularfire/2.1.0/angularfire.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/services/authentication.js"></script>
+    <script src="js/services/onlineGroups.js"></script>
+    <script src="js/controllers/registration.js"></script>
+    <script src="js/controllers/success.js"></script>
+    <script src="js/controllers/chat.js"></script>
+
+</head>
+<body>
+
+<header>
+    <nav class="cf" ng-include="'views/nav.html'"></nav>
+</header>
+<div class="page">
+    <!--<div class="userinfo" ng-show="currentUser" ng-controller="RegistrationController">
+      <span class="userinfo">Hi {{currentUser.firstname}}</span>
+      <a ng-href="#/login" ng-click="logout()">logout</a>
+    </div>-->
+
+    <main class="cf" ng-view>
+    </main>
+</div>
+
+<!--   Core JS Files   -->
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>-->
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>-->
+
+<!--   App JS Files   -->
+<!--<script async src="build/bundle.js"></script>-->
+
+</body>
+</html>

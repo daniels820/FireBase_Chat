@@ -1,0 +1,11 @@
+<div class="branding">
+  <a ng-href="#/">Home</a></div>
+<div class="userinfo" ng-show="currentUser" ng-controller="RegistrationController">
+  <span class="userinfo">Hi {{ currentUser.firstname }}</span>
+  <a ng-href="#/login" ng-click="logout()">logout</a>
+</div>
+
+<ul>
+  <li><a ng-hide="currentUser" ng-href="#/login">Login</a></li>
+  <li><a ng-hide="currentUser" ng-href="#/register">Register</a></li>
+</ul>
